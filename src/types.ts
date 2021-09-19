@@ -1,32 +1,32 @@
-export type CommandOptions = {
+export type LintOptions = {
   usageFiles: string[];
   languageFiles: string;
 }
 
-export type TranslationUsageInfo = {
-  name: string;
-  path: string;
-  fileContent: string;
+export type LintReport = {
+  missingKeys: UsageInfo[];
+  unusedKeys: UsageInfo[];
+  maybeDynamicKeys: UsageInfo[];
 }
 
-export type TranslationKeyInfo = {
-  line?: number;
-  key: string;
+export type FileInfo = {
+  name: string;
+  path: string;
+  content: string;
+}
+
+export type UsageInfo = {
   file?: string;
+  line?: number;
+  translation: string;
   language?: string;
 }
 
-export type TranslationKeyInfoWithBounding = TranslationKeyInfo & {
+export type UsageInfoWithBounding = UsageInfo & {
   previousCharacter: string;
   nextCharacter: string;
 }
 
-export type I18NLanguage = {
-  [language: string]: TranslationKeyInfo[];
-}
-
-export type I18NReport = {
-  missingKeys: TranslationKeyInfo[];
-  unusedKeys: TranslationKeyInfo[];
-  maybeDynamicKeys: TranslationKeyInfo[];
+export type UsageStatistics = {
+  [language: string]: UsageInfo[];
 }

@@ -1,10 +1,10 @@
 module.exports = {
   preset: "ts-jest",
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   testMatch: [
-    '**/tests/unit/**/*.spec.(js|ts)|**/__tests__/*.(js|ts)'
+    '**/tests/**/*.spec.(js|ts)',
   ],
   verbose: false,
-};
+}
