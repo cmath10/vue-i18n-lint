@@ -1,0 +1,29 @@
+{
+  "name": "vue-i18n-lint",
+  "version": "0.1.0",
+  "description": "Lint tool for vue-i18n package",
+  "main": "index.js",
+  "author": "zaytsev.cmath10@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint **/*.ts",
+    "lint:fix": "eslint --fix **/*.ts",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "dependencies": {
+    "glob": "^7.1.7",
+    "is-valid-glob": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "jest": "^27.2.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.3"
+  }
+}
