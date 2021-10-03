@@ -1,6 +1,6 @@
 export type LintOptions = {
   usageFiles: string[];
-  languageFiles: string;
+  languageFiles: string[];
 }
 
 export type LintReport = {
